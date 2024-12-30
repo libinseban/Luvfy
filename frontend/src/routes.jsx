@@ -8,7 +8,7 @@ import Profile from './pages/Profile';
 import Chat from './pages/Chat';
 import Communities from './pages/Communities';
 import Events from './pages/Events';
-import ModerationDashboard from './pages/ModerationDashboard';
+import ModerationDashboard from './pages/ModearationDashboard.jsx';
 
 const Router = () => {
   return (

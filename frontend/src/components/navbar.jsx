@@ -1,25 +1,31 @@
 import React from 'react';
-import { Box, Flex, Text, Button } from '@chakra-ui/react';
+import { Box, Flex, Text, Button, Container } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <Box bg="primary" color="white" padding="16px">
-      <Flex justify="space-between" align="center">
-        <Text fontSize="xl" fontWeight="bold">Lovify</Text>
-        <Flex>
-          <Link to="/login">
-            <Button colorScheme="teal" variant="outline" marginX="8px">
-              Login
-            </Button>
+    <Box bg="white" boxShadow="sm" position="sticky" top={0} zIndex={1000}>
+      <Container maxW="container.xl">
+        <Flex justify="space-between" align="center" py={4}>
+          <Link to="/">
+            <Text fontSize="2xl" fontWeight="bold" color="teal.500">
+              Luvfy
+            </Text>
           </Link>
-          <Link to="/signup">
-            <Button colorScheme="teal" variant="solid" marginX="8px">
-              Sign Up
-            </Button>
-          </Link>
+          <Flex gap={4}>
+            <Link to="/login">
+              <Button colorScheme="teal" variant="outline">
+                Login
+              </Button>
+            </Link>
+            <Link to="/signup">
+              <Button colorScheme="teal">
+                Sign Up
+              </Button>
+            </Link>
+          </Flex>
         </Flex>
-      </Flex>
+      </Container>
     </Box>
   );
 };
